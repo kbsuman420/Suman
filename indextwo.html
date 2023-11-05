@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylefive.css">
+</head>
+<body>
+    <div id="main">
+        <div id="circle">
+            <div class="stripe str1">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <h4>Germany</h4>
+                    <h6>Time Zone</h6>
+                </div>
+            </div>
+            <div class="stripe str2">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <h4>Germany</h4>
+                    <h6>Time Zone</h6>
+                </div>
+            </div>
+            <div class="stripe str3">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <h4>Germany</h4>
+                    <h6>Time Zone</h6>
+                </div>
+            </div>
+            <div class="stripe str4">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <h4>Germany</h4>
+                    <h6>Time Zone</h6>
+                </div>
+            </div>
+            <div class="stripe str5">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <h4>Germany</h4>
+                    <h6>Time Zone</h6>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="smbox"></div>
+            <div class="smbox"></div>
+            <div class="smbox"></div>
+            <div class="smbox"></div>
+            <div class="smbox"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var active = 3;
+        var smbox = document.querySelectorAll(".smbox");
+        gsap.to(smbox[active-1], {
+            opacity: 0.7
+        })
+        smbox.forEach(function(val, index){
+            val.addEventListener("click", function(){
+                gsap.to("#circle", {
+                    rotate: (3-(index+1))*10,
+                })
+                greyout();
+                gsap.to(this, {
+                    opacity: 0.8
+                })
+            })
+        })
+        function greyout(){
+            gsap.to(smbox, {
+                opacity: 0.08
+            })
+        }
+        gsap.to("#circle", {
+            rotate: 0,
+            ease: Expo.easeInOut,
+            duration: 2
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./styleseven.css">
+    <!-- <link rel="stylesheet" href="./loco.css"> -->
+</head>
+<body>
+    <div id="mincircle"></div>
+    <div id="main">
+        <div id="hero">
+            <div id="nav">
+                <a href="#">Cynthic Ugwu</a>
+                <h3>Menu+</h3>
+            </div>
+            <div id="heading">
+                <div class="bounding">
+                <h1>Product</h1>
+            </div>
+                <div id="blocktext">
+                    <div class="bounding">
+                <h1 id="secondh1">Designer</h1>
+                <h5 id="boundingelem">Based in toronto</h5>
+            </div>
+                </div>
+            </div>
+            <div id="chotiheading">
+                <div class="bounding">
+                <h5>available for freelance</h5>
+            </div>
+            <div class="bounding">
+                <h5>work from may 23</h5>
+            </div>
+            </div>
+            <div id="herofooter">
+                <a href="#">preveiously worked at yml<i class="ri-arrow-right-up-line"></i></a>
+                <a href="#">protopie ambassador<i class="ri-arrow-right-up-line"></i></a>
+                
+                <div id="iconset">
+                    <div class="circle"><i class="ri-arrow-down-fill"></i></div>
+                    <div class="circle"><i class="ri-arrow-down-fill"></i></div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="second">
+            <div class="elem">
+                <img src="./first.jpg">
+                <h1>The Plug</h1>
+                <h5>2022</h5>
+            </div>
+            <div class="elem">
+                <img src="./second.jpg">
+                <h1>ixperience</h1>
+                <h5>2022</h5>
+            </div>
+            <div class="elem elemlast">
+                <img src="./third.jpg">
+                <h1>hudu</h1>
+                <h5>2022</h5>
+            </div>
+        </div>
+        <div id="about">
+            <img src="./first.jpg">
+                <div id="textabout">
+                    <h5>(About me)</h5>
+                    <p>Rabindranath Tagore was an Indian poet, writer, playwright, composer, philosopher, social reformer and painter.[4][5][6] He reshaped Bengali literature and music as well as Indian art with Contextual Modernism in the late 19th and early 20th centuries. Author of the "profoundly sensitive, fresh and beautiful" poetry of Gitanjali,[7] he became in 1913 the first non-European and the first lyricist to win the Nobel Prize in Literature.
+                         Tagore's poetic songs were viewed as spiritual and mercurial; his elegant prose and magical poetry were popular in the Indian subcontinent. He was a fellow of the Royal Asiatic Society.</p>
+                         <a href="#">Let's talk</a>
+                </div>
+            </div>
+            <div id="subscribe">
+                <h5>(forget to mention)</h5>
+                <h3>subscribe to my youtube channel</h3>
+            </div>
+            <div id="footer">
+                <div id="footerleft">
+                    <h5>2023 & copy;</h5>
+                    <h5>0:05 AM EST</h5>
+                </div>
+                <div id="footerright">
+                    <a href="#">dribble</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkdin</a>
+                    <a href="#">twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+//         import LocomotiveScroll from 'locomotive-scroll';
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
+// function circlechaptakaro(){
+//     var xscale = 1;
+//     var yscale = 1;
+//     var xprev = 0;
+//     var yprev = 0;
+//     window.addEventListener("mousemove", function(dets){
+    
+//         xscale = gsap.utils.clamp(.8, 1.2, dets.clientX - xprev);
+//         yscale = gsap.utils.clamp(.8, 1.2, dets.clientY - yprev);
+
+//         xprev = dets.clientX;
+//         yprev = dets.clientY;
+//         circlemousefollower(xscale, yscale);
+//     });
+// }
+// circlechaptakaro();
+function circlemousefollower(){
+ window.addEventListener("mousemove", function(dets){
+    document.querySelector("#mincircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+ })   
+}
+function firstpageanim(){
+    var t1 = gsap.timeline();
+    t1.from("#nav", {
+        y: '-10',
+        opacity: 0,
+        duration: 2,
+        ease: Expo.easeInOut
+    })
+    gsap.to(".bounding h1", {
+        y: 0,
+        ease: Expo.easeInOut,
+        duration: 2
+    })
+    gsap.to(".bounding #boundingelem", {
+        y: 0,
+        ease: Expo.easeInOut,
+        duration: 2,
+        opacity: 0.7
+    })
+    gsap.from("#herofooter", {
+        y: 10,
+        opacity: 0,
+        duration: 3,
+        ease: Expo.easeInOut
+    })
+}
+circlemousefollower();
+firstpageanim();
+document.querySelectorAll(".elem").forEach(function(elem) {
+    elem.addEventListener("mousemove", function(dets){
+        var diff = dets.clientY - elem.getBoundingClientRect().top;
+        gsap.to(elem.querySelector("img"), {
+            opacity: 1,
+            ease: Power1,
+            top: diff,
+            left: dets.clientX
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        gsap.to(elem.querySelector("img"),{
+            opacity: 0
+        })
+    })
+});
+    </script>
+</body>
+</html>

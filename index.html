@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<!--  <body>
+    <p>Click the button to display a date after changing the hour</p>
+    <button onclick="onfunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function onfunction (){
+            var date = new Date().toLocaleTimeString();
+            // date.setHours(6);
+            console.log(date);
+            document.getElementById("demo").innerHTML = date;
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- <body>
+    <button onclick="goback()"> Go Back</button>
+    <p>gjsdbnmfsshjbnm</p>
+    <script>
+        function goback(){
+            window.history.back();
+        }
+    </script> -->
+    <!-- <button onclick="subscribe()">click here</button>
+    <script>
+        function subscribe(){
+alert(location.href);
+if(confirm("you want to visit thapa sir channel")){
+    location.href = "https://www.youtube.com/watch?v=KGkiIBTq0y0";
+
+}
+        } -->
+<!-- <p id="demo" class="deo">welcome to suman kundu website</p>
+<button onclick="changewrite()">on change</button> -->
+<!-- <script>
+    // function changewrite(){
+    //     document.getElementById("demo").innerHTML = "it is work very softly";
+    // }
+    function changewrite(){
+        document.getElementsByClassName("deo").innerHTML = "hello world";
+    }
+</script> -->
+<!-- <script>
+    function changewrite(){
+    document.querySelector("#demo").innerHTML = "hello world";
+    }
+    
+</script> -->
+<!-- </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!-- <ul>
+        <li id="web-id" style="cursor: progress; color: red;">PHP</li>
+        <li class="website" style="cursor: pointer;" onclick="onalert()">Js tutorial</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <p id="demo" onmousedown="mousedown()" onmouseup="mouseup()">
+        hello brother i am very carefully see but i miss it.
+    </p>
+    <input type="text" onkeypress="keypress()" onkeydown="keydown()">
+    <p id="keys"></p> -->
+    <!-- <label>Your Name</label>
+    <input type="text" id="name">
+    <br>
+    <label>please enter your favourite ice cream</label>
+    <select id="icecream" name="icecreams" onchange="selectice()">
+        <option value="">select one</option>
+        <option value="chocolate">chocolate</option>
+        <option value="vanila">vanila</option>
+        <option value="culfi">culfi</option>
+    </select>
+    <p id="demo">Mr.</p>
+    <script> -->
+        // console.log(document.querySelector("ul li#web-id").innerHTML);
+        // console.log(document.querySelector('.website').innerHTML);
+        // const onalert = () =>{
+        //     alert(location.href);
+        //     if(confirm("it is awsome video i think you like it")){
+        //         location.href = "https://www.youtube.com/watch?v=KGkiIBTq0y0";
+        //     }
+        // }
+        // const fourthway = document.querySelector("#web-id");
+        // fourthway.addEventListener("click", () =>{
+        //     console.log("I love this way of writing functions");
+        // })
+        // fourthway.addEventListener("mouseleave", () =>{
+        //     alert("I love this way of writing function");
+        // })
+        // function mousedown() {
+        //     document.getElementById("demo").style.color = "red";
+        // }
+        // function mouseup(){
+        //     document.getElementById("demo").style.color = "blue";
+        // }
+        // const keypress = () =>{
+        //     document.getElementById("keys").innerHTML = "you press ${event.key} and it's code is ${event.code}";
+        // }
+        const selectice = () =>{
+            const name = document.getElementById("name").value;
+            const icecreamname = document.getElementById("icecream").value;
+            const  result = document.getElementById("demo");
+            result.innerHTML = `Mr. ${name} and select ${icecreamname}`;
+        }
+    <!-- </script>
+</body> -->
+<!-- </html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentclass{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+        #childclass{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(26, 179, 29);
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body> -->
+    <!-- <h1>what is your name?</h1>
+    <p id="showmyname"></p>
+    <button id="btn" onclick="setTimeout">click here</button>
+    <script>
+        const myname = document.getElementById("#showmyname");
+        const button = document.getElementById("#btn");
+
+        const showmyname = () =>{
+            myname.innerHTML = "Suman Kundu";
+            // setTimeout(() =>{
+            //     myname.innerHTML = "Suman Kundu"
+            // }, 2000);
+        }
+
+        button.addEventListener("click", showmyname); -->
+<!-- 
+        <div id="parentclass">
+            <div id="childclass"></div>
+        </div>
+        <script>
+            const parentclasshold = document.getElementById("parentclass");
+            const childclasshold = document.getElementById("childclass");
+
+            const firstevent  = () =>{
+                alert("it is a parent class");
+            }
+            const lastevent = () =>{
+                alert("it is a child class");
+            }
+            parentclasshold.addEventListener("click", firstevent, true);
+            childclasshold.addEventListener("click", lastevent, true);
+        </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Best Jokes to make your day</h3>
+        <div id="joke" class="joke">
+            Awsome Joke is loading...
+            <button id="jokebtn">Next Joke</button>
+        </div>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

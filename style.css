@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 200px;
+    width: 600px;
+    text-align: center;
+    /* display: contents;
+    justify-content: space-evenly;
+    background-color: blueviolet; */
+    margin: auto;
+    background-color: #4d9961;
+    margin-top: 10%;
+    padding-top: 25px;
+}
+button{
+    height: 50px;
+    width: 100px;
+    box-shadow: 2px 2px;
+    border: 5px 5px solid #4d9961;
+    background-color: #4d9961;
+}
+button:hover{
+    background-color: rgb(249, 20, 20);
+}
+#main{
+    height: 100%;
+    width: 100%;
+    border: 5px solid black;
+    background-color: #4d9961;
+}
+

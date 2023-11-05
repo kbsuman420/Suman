@@ -1,0 +1,1 @@
+Learn how to create a "user rating" scorecard with CSS. User Rating. 4.1 average based on 254 reviews. 5 star.

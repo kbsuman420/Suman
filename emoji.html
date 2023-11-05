@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>Increment and Decrement</p>
+        <button id="inc">+</button>
+        <span><h2 id="counting">1</h2></span>
+        <button id="dec">-</button>
+        <p>Price: </p>
+        <h2 id="Price">399</h2>
+    </div>
+    <script>
+        let count = document.getElementById("counting");
+        const plus = document.getElementById("inc");
+        const minis = document.getElementById("dec");
+        let proprice = document.getElementById("price");
+
+        let newcount = 1;
+        let newprice = 0;
+
+        const incrementfun = () =>{
+            newcount = newcount + 1;
+            newprice = newprice + 399;
+            count.innerHTML = newcount;
+            proprice.innerHTML = newprice;
+        }
+        const decrementfun = () =>{
+            newcount = newcount - 1;
+            newprice = newcount - 399;
+            count.innerHTML = newcount;
+            proprice.innerHTML = newprice;
+        }
+        plus.addEventListener("click", incrementfun);
+        minis.addEventListener("click", decrementfun);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styletwo.css">
+</head>
+<body>
+     <div id="main">
+        <div id="center">
+            <div class="text">
+                <h1>i Stock</h1>
+                <h1>Sea</h1>
+                <h1>Technology</h1>
+            </div>
+            <div id="one" class="imagecontainer">
+                <img src="https://media.istockphoto.com/id/1427923994/photo/bullseye-arrow-sign-on-dark-background-3d-render-concept-for-business.jpg?s=1024x1024&w=is&k=20&c=UfI8yeZV3BQtAc3Xo81fVHmeYjL8im3MgyKbKE69Tmw=" alt="server down">
+            </div>
+            <div id="two" class="imagecontainer">
+                <img src="https://media.istockphoto.com/id/1434661909/photo/cyclone-tauktae-2021-cloud-map-arabian-sea-3d-render-neutral.webp?b=1&s=170667a&w=0&k=20&c=ZL_Ngt1OyImO2OldduWQeIo8WNcq5MHRJQFf3pVE3is=" alt="server Down">
+            </div>
+            <div id="three" class="imagecontainer">
+                <img src="https://media.istockphoto.com/id/1407071727/photo/digital-rupee-coin-floating-on-digital-surface-growth-chart-in-background-neon-design-3d.webp?b=1&s=170667a&w=0&k=20&c=6sOK4T9MxW8WRFudIbuaq5wEXzSyfSFCpysRmEQUHsg=" alt="Server Down">
+            </div>
+        </div> 
+     </div>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+        
+        gsap.to(".imagecontainer", {
+        width: "100%",
+        ease: Expo.easeInOut,
+        duration: 2,
+        stagger: 2
+})
+     gsap.to(".text h1", {
+        top: "-100%",
+        ease: Expo.easeInOut,
+        duration: 2,
+        stagger: 2
+     })
+     </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
